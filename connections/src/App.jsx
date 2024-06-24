@@ -1,23 +1,22 @@
-import bgImage from './assets/bg.png';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero'
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ArtistsRec from './pages/ArtistsRec'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <>
+    <Route path = '/' index element={<HomePage />} />
+    <Route path='/Artists' index element={<ArtistsRec />} />
+  </>
+  )
+);
 
 const App = () => {
-  
-  const bgImg = {
-    backgroundImage: `url(${bgImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-  
-  return (
-     <> {/*Empty container to return a single element*/}
-      <div className="min-h-screen flex flex-col" style={bgImg}>
-        <Navbar />
-
-        <Hero />
-      </div>
-      </>
-  );
+  return <RouterProvider router={router} />;
 };
 export default App;
