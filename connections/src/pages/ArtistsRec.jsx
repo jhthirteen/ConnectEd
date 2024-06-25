@@ -1,6 +1,5 @@
 import TextBar from '../components/TextBar';
 import bgImage from '../assets/artistBackdrop.png'
-import ArtistHeader from '../components/ArtistHeader';
 
 const ArtistsRec = () =>{
     const bgImg = {
