@@ -1,8 +1,19 @@
 import TextBar from '../components/TextBar';
+import bgImage from '../assets/artistBackdrop.png'
+import ArtistHeader from '../components/ArtistHeader';
 
 const ArtistsRec = () =>{
+    const bgImg = {
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      };
     return(
-        <TextBar />
+        <> {/*Empty container to return a single element*/}
+            <div className='min-h-screen flex flex-col' style={bgImg}>
+                <TextBar />
+            </div>
+        </>
     );
 };
 export default ArtistsRec;
